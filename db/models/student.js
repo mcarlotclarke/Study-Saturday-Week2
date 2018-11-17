@@ -26,8 +26,8 @@ const Student = db.define('student', {
     },
   },
 });
-
-Student.beforeCreate(student => {
+// this is a hook
+Student.beforeCreate(student => { // don't use this keyword with => functions
   const nameFirst = student.firstName;
   const nameLast = student.lastName;
 
